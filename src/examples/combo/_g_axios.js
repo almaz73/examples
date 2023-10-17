@@ -3,7 +3,6 @@
 import axios from "axios";
 import {ElNotification} from "element-plus";
 
-let repeated = {}
 axios.interceptors.response.use(resp => resp
     , err => {
         ElNotification({
