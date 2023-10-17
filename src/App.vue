@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {RouterLink, RouterView} from 'vue-router'
+import '@/examples/combo/_g_axios.js'
 </script>
 
 <template>

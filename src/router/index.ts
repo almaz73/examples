@@ -9,10 +9,7 @@ const router = createRouter({
             name: 'home',
             component: HelloWorld
         },
-        {path: '/combo', name: 'combo', component: () => import('@/views/ComboboxCustom.vue')},
-
-
-
+        {path: '/combo', name: 'combo', component: () => import('@/examples/combo/ComboboxCustom.vue')},
     ]
 })
 
