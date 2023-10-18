@@ -32,6 +32,7 @@ function addDatas(value: string): void {
         type: 'success'
       })
     }
+    language.value = ''
     setTimeout(() => isWaiting.value = false, 300)
   })
 }
@@ -76,7 +77,7 @@ function clicked() {
           Создать
         </el-button>
         <el-button type="primary" v-else @click="clicked()">
-          Создать
+          {{ tableData.length ? 'Добавить' : 'Создать' }}
         </el-button>
         <el-button disabled v-if="tableData && tableData.length===0">
           Очистить
@@ -93,7 +94,7 @@ function clicked() {
               highlight-current-row
               :data="tableData"
               @select="selectTable"
-              style="width: 100%; height: 350px"
+              style="width: 100%; height: 350px; border: 1px solid #95d475"
           >
             <el-table-column property="id" label="ID" width="85"/>
             <el-table-column property="name" sortable label="Сущность"/>
